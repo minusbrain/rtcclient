@@ -264,13 +264,6 @@ class FieldBase(RTCBase):
                     continue
 
             attr = key.split(":")[-1].replace("-", "_")
-            attr_list = attr.split(".")
-
-            # ignore long attributes
-            if len(attr_list) > 1:
-                # attr = "_".join([attr_list[-2],
-                #                  attr_list[-1]])
-                continue
 
             self.field_alias[attr] = key
 
